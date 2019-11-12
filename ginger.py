@@ -10,7 +10,7 @@ from app.libs.error_code import ServerError
 app = create_app()
 
 
-@app.errorhandler(Exception)
+# @app.errorhandler(Exception)
 def framework_error(e):
     if isinstance(e, APIException):
         return e
@@ -29,4 +29,4 @@ def framework_error(e):
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
